@@ -193,8 +193,8 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
                 الكمية:
               </label>
               <input
-                id="straightQty"
-                name="straightQty"
+                id="AuraQty"
+                name="AuraQty"
                 type="number"
                 min="0"
                 max="10"
