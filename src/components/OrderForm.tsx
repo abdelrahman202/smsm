@@ -62,7 +62,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      const AuraQtyInput = document.getElementById('AuraQty') as HTMLInputElement;
+      const auraQtyInput = document.getElementById('auraQty') as HTMLInputElement;
       const HarmoniaQtyInput = document.getElementById('HarmoniaQty') as HTMLInputElement;
       const SophiaQtyInput = document.getElementById('SophiaQty') as HTMLInputElement;
 
