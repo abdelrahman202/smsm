@@ -5,7 +5,7 @@ export interface OrderFormData {
   area: string;
   address: string;
   auraQuantity: number;
-  HarmoniaQuantity: number;
+  harmoniaQuantity: number;
   SophiaQuantity: number;
 }
 
