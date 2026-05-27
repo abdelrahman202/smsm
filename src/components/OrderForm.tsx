@@ -216,8 +216,8 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
                 الكمية:
               </label>
               <input
-                id="curvedQty"
-                name="curvedQty"
+                id="HarmoniaQty"
+                name="HarmoniaQty"
                 type="number"
                 min="0"
                 max="10"
