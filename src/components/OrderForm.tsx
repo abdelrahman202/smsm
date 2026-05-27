@@ -189,7 +189,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
             />
             <p className={styles.productName}>Aura</p>
             <div className="flex items-center justify-center gap-2">
-              <label htmlFor="AuraQty" style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem' }}>
+              <label htmlFor="auraQty" style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem' }}>
                 الكمية:
               </label>
               <input
