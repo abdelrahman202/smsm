@@ -45,7 +45,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     if (!formData.address.trim()) newErrors.address = 'العنوان مطلوب';
 
     const auraQtyInput = document.getElementById('auraQty') as HTMLInputElement;
-    const HarmoniaQtyInput = document.getElementById('HarmoniaQty') as HTMLInputElement;
+    const harmoniaQtyInput = document.getElementById('harmoniaQty') as HTMLInputElement;
     const SophiaQtyInput = document.getElementById('SophiaQty') as HTMLInputElement;
     const auraQty = auraQtyInput ? parseInt(auraQtyInput.value) || 0 : 0;
     const HarmoniaQty = HarmoniaQtyInput ? parseInt(HarmoniaQtyInput.value) || 0 : 0;
