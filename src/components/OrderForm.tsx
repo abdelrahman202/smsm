@@ -63,11 +63,11 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     e.preventDefault();
     if (validate()) {
       const auraQtyInput = document.getElementById('auraQty') as HTMLInputElement;
-      const HarmoniaQtyInput = document.getElementById('HarmoniaQty') as HTMLInputElement;
+      const harmoniaQtyInput = document.getElementById('harmoniaQty') as HTMLInputElement;
       const SophiaQtyInput = document.getElementById('SophiaQty') as HTMLInputElement;
 
       const auraQty = auraQtyInput ? parseInt(auraQtyInput.value) || 0 : 0;
-      const HarmoniaQty = HarmoniaQtyInput ? parseInt(HarmoniaQtyInput.value) || 0 : 0;
+      const harmoniaQty = HarmoniaQtyInput ? parseInt(harmoniaQtyInput.value) || 0 : 0;
       const SophiaQty = SophiaQtyInput ? parseInt(SophiaQtyInput.value) || 0 : 0;
 
       const finalFormData: OrderFormData = {
