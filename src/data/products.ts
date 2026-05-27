@@ -87,7 +87,7 @@ export const products: Product[] = [
     price: 460,
     collection: 'bracelets',
     image: '/aura.jpg',
-    images: ['/straight.jpg', '/straight1.jpg', '/packa.jpg'],
+    images: ['/aura.jpg', '/straight1.jpg', '/packa.jpg'],
     description: 'A bold piece inspired by Cairo is timeless spirit. The KAÏRO bracelet combines heritage with modern sophistication.',
     descriptionAr: 'تصميم يجمع بين الأصالة والحداثة.',
     status: 'available',
