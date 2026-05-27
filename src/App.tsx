@@ -52,7 +52,7 @@ function App() {
     setIsSubmitting(true);
 
     try {
-      const totalQuantity = data.AuraQuantity + data.curvedQuantity + data.curvedGoldQuantity;
+      const totalQuantity = data.AuraQuantity + data.HarmoniaQuantity + data.curvedGoldQuantity;
       const totalPrice = totalQuantity * 460;
 
       const formDataToSend = {
