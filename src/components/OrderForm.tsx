@@ -14,7 +14,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     governorate: '',
     area: '',
     address: '',
-    AuraQuantity: 0,
+    auraQuantity: 0,
     HarmoniaQuantity: 0,
     SophiaQuantity: 0,
   });
