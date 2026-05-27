@@ -92,7 +92,7 @@ export default function FeaturedBraceletsBlock() {
           THE COLLECTION
         </span>
         {[
-          { src: '/straight.jpg', name: 'AURA' },
+          { src: '/aura.jpg', name: 'AURA' },
           { src: '/curved.jpg', name: 'HARMONIA' },
           { src: '/curvedgold.jpg', name: 'SOPHIA' },
         ].map((item) => (
