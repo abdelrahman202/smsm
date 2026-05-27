@@ -34,7 +34,7 @@ export const products: Product[] = [
     slug: 'harmonia-curved',
     price: 460,
     collection: 'bracelets',
-    image: '/curved.jpg',
+    image: '/harmonia.jpg',
     images: ['/curved.jpg', '/curved1.jpg', '/packh.jpg'],
     description: 'The curved design flows with your natural movements, offering comfort and refined aesthetics. A statement piece for the discerning individual.',
     descriptionAr: 'إنحناءة تتبع حركتك، وتُكمل أسلوبك.',
