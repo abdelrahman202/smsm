@@ -52,7 +52,7 @@ function App() {
     setIsSubmitting(true);
 
     try {
-      const totalQuantity = data.auraQuantity + data.HarmoniaQuantity + data.SophiaQuantity;
+      const totalQuantity = data.auraQuantity + data.harmoniaQuantity + data.SophiaQuantity;
       const totalPrice = totalQuantity * 460;
 
       const formDataToSend = {
