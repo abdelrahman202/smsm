@@ -73,7 +73,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
       const finalFormData: OrderFormData = {
         ...formData,
         AuraQuantity: AuraQty,
-        curvedQuantity: curvedQty,
+        HarmoniaQuantity: HarmoniaQty,
         curvedGoldQuantity: curvedGoldQty,
       };
 
