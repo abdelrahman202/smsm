@@ -6,7 +6,7 @@ export interface OrderFormData {
   address: string;
   AuraQuantity: number;
   HarmoniaQuantity: number;
-  curvedGoldQuantity: number;
+  SophiaQuantity: number;
 }
 
 export const governorates = {
