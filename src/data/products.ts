@@ -112,7 +112,7 @@ export const products: Product[] = [
     slug: 'aurelia-bracelet',
     price: 460,
     collection: 'bracelets',
-    image: '/curved.jpg',
+    image: '/harmonia.jpg',
     images: ['/curved.jpg', '/curved1.jpg', '/packh.jpg'],
     description: 'Elegance in its purest form. The AURELIA bracelet is crafted for those who appreciate quiet luxury.',
     descriptionAr: 'أناقة في أسمى صورها. تصميم للمميزين.',
