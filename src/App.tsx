@@ -61,7 +61,7 @@ function App() {
         governorate: data.governorate,
         area: data.area,
         address: data.address,
-        AuraQty: data.AuraQuantity,
+        AuraQty: data.auraQuantity,
         HarmoniaQty: data.HarmoniaQuantity,
         SophiaQty: data.SophiaQuantity,
         totalPrice: totalPrice,
