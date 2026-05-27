@@ -206,7 +206,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
 
           <div className={styles.productCard}>
             <img
-              src="/curved.jpg"
+              src="/harmonia.jpg"
               alt="إسورة منحنية"
               className={styles.productImage}
             />
