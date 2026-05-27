@@ -44,7 +44,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     if (!formData.area) newErrors.area = 'المنطقة مطلوبة';
     if (!formData.address.trim()) newErrors.address = 'العنوان مطلوب';
 
-    const straightQtyInput = document.getElementById('straightQty') as HTMLInputElement;
+    const AuraQtyInput = document.getElementById('AuraQty') as HTMLInputElement;
     const curvedQtyInput = document.getElementById('curvedQty') as HTMLInputElement;
     const curvedGoldQtyInput = document.getElementById('curvedGoldQty') as HTMLInputElement;
     const straightQty = straightQtyInput ? parseInt(straightQtyInput.value) || 0 : 0;
