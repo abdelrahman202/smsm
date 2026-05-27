@@ -600,6 +600,60 @@ fbq('track', 'PageView');
                   />
                 </div>
               </div>
+
+              <div class="bracelet-card">
+                <img src="/straight.jpg" alt="KAÏRO" class="bracelet-image" />
+                <h4 class="bracelet-name">KAÏRO</h4>
+                <p class="bracelet-label">تصميم مميز</p>
+                <div class="quantity-control">
+                  <label for="kairoQty" class="quantity-label">الكمية:</label>
+                  <input
+                    type="number"
+                    id="kairoQty"
+                    name="kairoQty"
+                    min="0"
+                    max="10"
+                    value="0"
+                    class="quantity-input"
+                  />
+                </div>
+              </div>
+
+              <div class="bracelet-card">
+                <img src="/curved.jpg" alt="AURELIA" class="bracelet-image" />
+                <h4 class="bracelet-name">AURELIA</h4>
+                <p class="bracelet-label">تصميم راقي</p>
+                <div class="quantity-control">
+                  <label for="aureliaQty" class="quantity-label">الكمية:</label>
+                  <input
+                    type="number"
+                    id="aureliaQty"
+                    name="aureliaQty"
+                    min="0"
+                    max="10"
+                    value="0"
+                    class="quantity-input"
+                  />
+                </div>
+              </div>
+
+              <div class="bracelet-card">
+                <img src="/curvedgold.jpg" alt="SOLÉA" class="bracelet-image" />
+                <h4 class="bracelet-name">SOLÉA</h4>
+                <p class="bracelet-label">تصميم أنثوي</p>
+                <div class="quantity-control">
+                  <label for="soleaQty" class="quantity-label">الكمية:</label>
+                  <input
+                    type="number"
+                    id="soleaQty"
+                    name="soleaQty"
+                    min="0"
+                    max="10"
+                    value="0"
+                    class="quantity-input"
+                  />
+                </div>
+              </div>
             </div>
 
             <div class="divider"></div>
@@ -920,8 +974,11 @@ fbq('track', 'PageView');
         const straightQty = parseInt(document.getElementById('straightQty').value) || 0;
         const curvedQty = parseInt(document.getElementById('curvedQty').value) || 0;
         const curvedGoldQty = parseInt(document.getElementById('curvedGoldQty').value) || 0;
+        const kairoQty = parseInt(document.getElementById('kairoQty').value) || 0;
+        const aureliaQty = parseInt(document.getElementById('aureliaQty').value) || 0;
+        const soleaQty = parseInt(document.getElementById('soleaQty').value) || 0;
 
-        if (straightQty === 0 && curvedQty === 0 && curvedGoldQty === 0) {
+        if (straightQty === 0 && curvedQty === 0 && curvedGoldQty === 0 && kairoQty === 0 && aureliaQty === 0 && soleaQty === 0) {
           showError('addressError', 'اختر كمية من منتج واحد على الأقل');
           isValid = false;
         }
@@ -947,6 +1004,13 @@ fbq('track', 'PageView');
         submitBtn.disabled = true;
         submitBtn.textContent = 'جاري الإرسال...';
 
+        const straightQty = parseInt(document.getElementById('straightQty').value) || 0;
+        const curvedQty = parseInt(document.getElementById('curvedQty').value) || 0;
+        const curvedGoldQty = parseInt(document.getElementById('curvedGoldQty').value) || 0;
+        const kairoQty = parseInt(document.getElementById('kairoQty').value) || 0;
+        const aureliaQty = parseInt(document.getElementById('aureliaQty').value) || 0;
+        const soleaQty = parseInt(document.getElementById('soleaQty').value) || 0;
+
         const formData = {
           name: document.getElementById('name').value.trim(),
           phone: document.getElementById('phone').value.trim(),
@@ -957,12 +1021,13 @@ fbq('track', 'PageView');
           building: document.getElementById('building').value.trim(),
           floor: document.getElementById('floor').value.trim(),
           landmarks: document.getElementById('landmarks').value.trim(),
-          straightQty: parseInt(document.getElementById('straightQty').value) || 0,
-          curvedQty: parseInt(document.getElementById('curvedQty').value) || 0,
-          curvedGoldQty: parseInt(document.getElementById('curvedGoldQty').value) || 0,
-          totalPrice: (parseInt(document.getElementById('straightQty').value) || 0) * 460 +
-                      (parseInt(document.getElementById('curvedQty').value) || 0) * 460 +
-                      (parseInt(document.getElementById('curvedGoldQty').value) || 0) * 460,
+          straightQty: straightQty,
+          curvedQty: curvedQty,
+          curvedGoldQty: curvedGoldQty,
+          kairoQty: kairoQty,
+          aureliaQty: aureliaQty,
+          soleaQty: soleaQty,
+          totalPrice: (straightQty + curvedQty + curvedGoldQty + kairoQty + aureliaQty + soleaQty) * 460,
           timestamp: new Date().toISOString()
         };
 
@@ -979,14 +1044,20 @@ fbq('track', 'PageView');
           });
 const finalPrice = (parseInt(document.getElementById('straightQty').value) || 0) * 460 +
                    (parseInt(document.getElementById('curvedQty').value) || 0) * 460 +
-                   (parseInt(document.getElementById('curvedGoldQty').value) || 0) * 460;
+                   (parseInt(document.getElementById('curvedGoldQty').value) || 0) * 460 +
+                   (parseInt(document.getElementById('kairoQty').value) || 0) * 460 +
+                   (parseInt(document.getElementById('aureliaQty').value) || 0) * 460 +
+                   (parseInt(document.getElementById('soleaQty').value) || 0) * 460;
 fbq('track', 'Purchase', {
   value: finalPrice,
   currency: 'EGP',
   content_name: 'ORZI Heritage Bracelets',
   num_items: (parseInt(document.getElementById('straightQty').value) || 0) +
              (parseInt(document.getElementById('curvedQty').value) || 0) +
-             (parseInt(document.getElementById('curvedGoldQty').value) || 0)
+             (parseInt(document.getElementById('curvedGoldQty').value) || 0) +
+             (parseInt(document.getElementById('kairoQty').value) || 0) +
+             (parseInt(document.getElementById('aureliaQty').value) || 0) +
+             (parseInt(document.getElementById('soleaQty').value) || 0)
 });
           modal.classList.add('active');
           form.reset();
