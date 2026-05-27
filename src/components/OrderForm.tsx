@@ -46,7 +46,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
 
     const auraQtyInput = document.getElementById('auraQty') as HTMLInputElement;
     const harmoniaQtyInput = document.getElementById('harmoniaQty') as HTMLInputElement;
-    const SophiaQtyInput = document.getElementById('SophiaQty') as HTMLInputElement;
+    const sophiaQtyInput = document.getElementById('sophiaQty') as HTMLInputElement;
     const auraQty = auraQtyInput ? parseInt(auraQtyInput.value) || 0 : 0;
     const harmoniaQty = harmoniaQtyInput ? parseInt(harmoniaQtyInput.value) || 0 : 0;
     const SophiaQty = SophiaQtyInput ? parseInt(SophiaQtyInput.value) || 0 : 0;
