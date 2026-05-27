@@ -6,7 +6,7 @@ const ProductSlider = () => {
   const [autoPlay, setAutoPlay] = useState(true);
 
   const images = [
-    { id: 1, src: '/straight.jpg', alt: 'إسورة مستقيمة - تصميم حديث' },
+    { id: 1, src: '/aura.jpg', alt: 'إسورة مستقيمة - تصميم حديث' },
     { id: 2, src: '/curved.jpg', alt: 'إسورة منحنية - تصميم فاخر' },
     { id: 3, src: '/curvedgold.jpg', alt: 'إسورة منحنية ذهبي - حصري للنساء' },
     { id: 4, src: '/curved1.jpg', alt: 'إسورة منحنية - عرض علوي' },
