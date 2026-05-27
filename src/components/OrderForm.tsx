@@ -68,7 +68,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
 
       const auraQty = auraQtyInput ? parseInt(auraQtyInput.value) || 0 : 0;
       const harmoniaQty = HarmoniaQtyInput ? parseInt(harmoniaQtyInput.value) || 0 : 0;
-      const SophiaQty = SophiaQtyInput ? parseInt(SophiaQtyInput.value) || 0 : 0;
+      const sophiaQty = sophiaQtyInput ? parseInt(sophiaQtyInput.value) || 0 : 0;
 
       const finalFormData: OrderFormData = {
         ...formData,
