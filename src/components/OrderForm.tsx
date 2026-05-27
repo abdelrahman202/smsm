@@ -236,12 +236,12 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
             <p className={styles.productName}>Sophia</p>
             <p className={styles.productLabel}>حصري للنساء</p>
             <div className="flex items-center justify-center gap-2">
-              <label htmlFor="SophiaQty" style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem' }}>
+              <label htmlFor="sophiaQty" style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem' }}>
                 الكمية:
               </label>
               <input
-                id="SophiaQty"
-                name="SophiaQty"
+                id="sophiaQty"
+                name="sophiaQty"
                 type="number"
                 min="0"
                 max="10"
