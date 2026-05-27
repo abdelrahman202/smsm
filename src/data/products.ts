@@ -92,10 +92,10 @@ export const products: Product[] = [
     descriptionAr: 'تصميم يجمع بين الأصالة والحداثة.',
     status: 'available',
     specs: {
-      material: 'Nickel Plated Brass',
+      material: 'Red copper',
       materialAr: 'نحاس أحمر',
-      coating: 'Nickel Plating',
-      coatingAr: 'طلاء نيكل',
+      coating: 'Red copper',
+      coatingAr: 'نحاس أحمر',
       resistance: 'Anti-tarnish & Corrosion Resistant',
       resistanceAr: 'مقاوم لتغير اللون والصدأ',
       size: 'Adjustable for all wrist sizes',
