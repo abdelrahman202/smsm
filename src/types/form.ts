@@ -4,7 +4,7 @@ export interface OrderFormData {
   governorate: string;
   area: string;
   address: string;
-  straightQuantity: number;
+  AuraQuantity: number;
   curvedQuantity: number;
   curvedGoldQuantity: number;
 }
