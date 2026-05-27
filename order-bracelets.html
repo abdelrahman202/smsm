@@ -1004,7 +1004,7 @@ fbq('track', 'PageView');
         submitBtn.disabled = true;
         submitBtn.textContent = 'جاري الإرسال...';
 
-        const AuraQty = parseInt(document.getElementById('AuraQty').value) || 0;
+        const auraQty = parseInt(document.getElementById('auraQty').value) || 0;
         const HarmoniaQty = parseInt(document.getElementById('HarmoniaQty').value) || 0;
         const SophiaQty = parseInt(document.getElementById('SophiaQty').value) || 0;
         const kairoQty = parseInt(document.getElementById('kairoQty').value) || 0;
@@ -1021,7 +1021,7 @@ fbq('track', 'PageView');
           building: document.getElementById('building').value.trim(),
           floor: document.getElementById('floor').value.trim(),
           landmarks: document.getElementById('landmarks').value.trim(),
-          AuraQty: AuraQty,
+          auraQty: auraQty,
           HarmoniaQty: HarmoniaQty,
           SophiaQty: SophiaQty,
           kairoQty: kairoQty,
