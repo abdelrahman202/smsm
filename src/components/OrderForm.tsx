@@ -62,7 +62,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      const straightQtyInput = document.getElementById('straightQty') as HTMLInputElement;
+      const AuraQtyInput = document.getElementById('AuraQty') as HTMLInputElement;
       const curvedQtyInput = document.getElementById('curvedQty') as HTMLInputElement;
       const curvedGoldQtyInput = document.getElementById('curvedGoldQty') as HTMLInputElement;
 
