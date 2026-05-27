@@ -51,7 +51,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     const HarmoniaQty = HarmoniaQtyInput ? parseInt(HarmoniaQtyInput.value) || 0 : 0;
     const SophiaQty = SophiaQtyInput ? parseInt(SophiaQtyInput.value) || 0 : 0;
 
-    if (AuraQty === 0 && HarmoniaQty === 0 && curvedGoldQty === 0) {
+    if (AuraQty === 0 && HarmoniaQty === 0 && SophiaQty === 0) {
       newErrors.address = 'اختر كمية من منتج واحد على الأقل';
     }
 
