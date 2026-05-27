@@ -16,7 +16,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     address: '',
     auraQuantity: 0,
     harmoniaQuantity: 0,
-    SophiaQuantity: 0,
+    sophiaQuantity: 0,
   });
 
   const [errors, setErrors] = useState<Partial<OrderFormData>>({});
