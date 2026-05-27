@@ -8,7 +8,7 @@ export const products: Product[] = [
     slug: 'aura-straight',
     price: 460,
     collection: 'bracelets',
-    image: '/straight.jpg',
+    image: '/aura.jpg',
     images: ['/straight.jpg', '/straight1.jpg', '/packa.jpg'],
     description: 'A timeless straight bracelet that embodies elegance and sophistication. Crafted with precision for those who appreciate understated luxury.',
     descriptionAr: 'تصميم مستقيم، حضور هادئ.',
