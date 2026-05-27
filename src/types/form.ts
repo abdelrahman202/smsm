@@ -4,7 +4,7 @@ export interface OrderFormData {
   governorate: string;
   area: string;
   address: string;
-  AuraQuantity: number;
+  auraQuantity: number;
   HarmoniaQuantity: number;
   SophiaQuantity: number;
 }
