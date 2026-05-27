@@ -144,8 +144,8 @@ export const products: Product[] = [
     descriptionAr: 'دفء مشمس في كل لمسة. تصميم للمرأة العصرية.',
     status: 'available',
     specs: {
-      material: 'Gold Plated Brass',
-      materialAr: 'نحاس مطلي بالذهب',
+      material: 'Brass',
+      materialAr: 'نحاس أصفر',
       coating: 'Gold Plating',
       coatingAr: 'طلاء ذهبي',
       resistance: 'Anti-tarnish & Corrosion Resistant',
