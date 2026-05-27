@@ -8,7 +8,7 @@ const ProductSlider = () => {
   const images = [
     { id: 1, src: '/aura.jpg', alt: 'إسورة مستقيمة - تصميم حديث' },
     { id: 2, src: '/harmonia.jpg', alt: 'إسورة منحنية - تصميم فاخر' },
-    { id: 3, src: '/curvedgold.jpg', alt: 'إسورة منحنية ذهبي - حصري للنساء' },
+    { id: 3, src: '/sophia.jpg', alt: 'إسورة منحنية ذهبي - حصري للنساء' },
     { id: 4, src: '/curved1.jpg', alt: 'إسورة منحنية - عرض علوي' },
     { id: 5, src: '/curvedgold1.jpg', alt: 'إسورة منحنية ذهبي - على المعصم' },
     { id: 6, src: '/straight1.jpg', alt: 'إسورة مستقيمة - عرض جانبي' },
