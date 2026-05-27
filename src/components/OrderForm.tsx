@@ -74,7 +74,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
         ...formData,
         auraQuantity: auraQty,
         harmoniaQuantity: harmoniaQty,
-        SophiaQuantity: SophiaQty,
+        sophiaQuantity: sophiaQty,
       };
 
       onSubmit(finalFormData);
