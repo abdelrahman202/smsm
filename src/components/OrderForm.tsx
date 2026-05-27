@@ -229,7 +229,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
 
           <div className={styles.productCard}>
             <img
-              src="/curvedgold.jpg"
+              src="/sophia.jpg"
               alt="إسورة منحنية ذهبي"
               className={styles.productImage}
             />
