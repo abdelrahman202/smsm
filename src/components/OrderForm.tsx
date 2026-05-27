@@ -212,7 +212,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
             />
             <p className={styles.productName}>Harmonia</p>
             <div className="flex items-center justify-center gap-2">
-              <label htmlFor="curvedQty" style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem' }}>
+              <label htmlFor="HarmoniaQty" style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem' }}>
                 الكمية:
               </label>
               <input
