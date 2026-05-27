@@ -49,7 +49,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     const SophiaQtyInput = document.getElementById('SophiaQty') as HTMLInputElement;
     const AuraQty = AuraQtyInput ? parseInt(AuraQtyInput.value) || 0 : 0;
     const HarmoniaQty = HarmoniaQtyInput ? parseInt(HarmoniaQtyInput.value) || 0 : 0;
-    const curvedGoldQty = curvedGoldQtyInput ? parseInt(curvedGoldQtyInput.value) || 0 : 0;
+    const SophiaQty = SophiaQtyInput ? parseInt(SophiaQtyInput.value) || 0 : 0;
 
     if (AuraQty === 0 && HarmoniaQty === 0 && curvedGoldQty === 0) {
       newErrors.address = 'اختر كمية من منتج واحد على الأقل';
