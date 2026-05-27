@@ -183,7 +183,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className={styles.productCard}>
             <img
-              src="/straight.jpg"
+              src="/aura.jpg"
               alt="إسورة مستقيمة"
               className={styles.productImage}
             />
