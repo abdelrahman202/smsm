@@ -72,7 +72,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
 
       const finalFormData: OrderFormData = {
         ...formData,
-        AuraQuantity: AuraQty,
+        auraQuantity: auraQty,
         HarmoniaQuantity: HarmoniaQty,
         SophiaQuantity: SophiaQty,
       };
