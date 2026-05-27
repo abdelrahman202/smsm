@@ -63,7 +63,7 @@ function App() {
         address: data.address,
         auraQty: data.auraQuantity,
         harmoniaQty: data.harmoniaQuantity,
-        SophiaQty: data.SophiaQuantity,
+        sophiaQty: data.sophiaQuantity,
         totalPrice: totalPrice,
         timestamp: new Date().toISOString(),
       };
