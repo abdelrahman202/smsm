@@ -15,7 +15,7 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     area: '',
     address: '',
     auraQuantity: 0,
-    HarmoniaQuantity: 0,
+    harmoniaQuantity: 0,
     SophiaQuantity: 0,
   });
 
