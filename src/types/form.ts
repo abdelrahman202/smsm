@@ -5,7 +5,7 @@ export interface OrderFormData {
   area: string;
   address: string;
   AuraQuantity: number;
-  curvedQuantity: number;
+  HarmoniaQuantity: number;
   curvedGoldQuantity: number;
 }
 
