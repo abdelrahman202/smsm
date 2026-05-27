@@ -93,7 +93,7 @@ export const products: Product[] = [
     status: 'available',
     specs: {
       material: 'Nickel Plated Brass',
-      materialAr: 'نحاس مطلي بالنيكل',
+      materialAr: 'نحاس أحمر',
       coating: 'Nickel Plating',
       coatingAr: 'طلاء نيكل',
       resistance: 'Anti-tarnish & Corrosion Resistant',
