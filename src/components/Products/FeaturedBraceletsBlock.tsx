@@ -93,7 +93,7 @@ export default function FeaturedBraceletsBlock() {
         </span>
         {[
           { src: '/aura.jpg', name: 'AURA' },
-          { src: '/curved.jpg', name: 'HARMONIA' },
+          { src: '/harmonia.jpg', name: 'HARMONIA' },
           { src: '/curvedgold.jpg', name: 'SOPHIA' },
         ].map((item) => (
           <div key={item.name} className="flex items-center gap-3 group/thumb">
