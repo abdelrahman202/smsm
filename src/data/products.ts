@@ -93,9 +93,9 @@ export const products: Product[] = [
     status: 'available',
     specs: {
       material: 'Red copper',
-      materialAr: 'نحاس أحمر',
+      materialAr: 'نحاس عتيق',
       coating: 'Red copper',
-      coatingAr: 'نحاس أحمر',
+      coatingAr: 'نحاس عتيق',
       resistance: 'Anti-tarnish & Corrosion Resistant',
       resistanceAr: 'مقاوم لتغير اللون والصدأ',
       size: 'Adjustable for all wrist sizes',
