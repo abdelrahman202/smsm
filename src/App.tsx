@@ -62,7 +62,7 @@ function App() {
         area: data.area,
         address: data.address,
         AuraQty: data.AuraQuantity,
-        HarmoniaQty: data.curvedQuantity,
+        HarmoniaQty: data.HarmoniaQuantity,
         curvedGoldQty: data.curvedGoldQuantity,
         totalPrice: totalPrice,
         timestamp: new Date().toISOString(),
