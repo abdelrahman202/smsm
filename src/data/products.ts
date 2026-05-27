@@ -82,7 +82,7 @@ export const products: Product[] = [
   {
     id: 'kairo-bracelet',
     name: 'KAÏRO',
-    nameAr: 'كاير - تصميم مميز',
+    nameAr: 'كايرو - تصميم مميز',
     slug: 'kairo-bracelet',
     price: 460,
     collection: 'bracelets',
