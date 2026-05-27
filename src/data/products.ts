@@ -100,7 +100,7 @@ export const products: Product[] = [
       resistanceAr: 'مقاوم لتغير اللون والصدأ',
       size: 'Adjustable for all wrist sizes',
       sizeAr: 'قابل للتعديل لجميع أحجام المعاصم',
-      color: 'Red copper',
+      color: 'Red',
       colorAr: 'أحمر',
       unisex: true,
     },
