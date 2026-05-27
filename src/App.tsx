@@ -61,7 +61,7 @@ function App() {
         governorate: data.governorate,
         area: data.area,
         address: data.address,
-        straightQty: data.straightQuantity,
+        AuraQty: data.AuraQuantity,
         curvedQty: data.curvedQuantity,
         curvedGoldQty: data.curvedGoldQuantity,
         totalPrice: totalPrice,
