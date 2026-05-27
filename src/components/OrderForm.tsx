@@ -48,10 +48,10 @@ export default function OrderForm({ onSubmit, isSubmitting }: OrderFormProps) {
     const harmoniaQtyInput = document.getElementById('harmoniaQty') as HTMLInputElement;
     const SophiaQtyInput = document.getElementById('SophiaQty') as HTMLInputElement;
     const auraQty = auraQtyInput ? parseInt(auraQtyInput.value) || 0 : 0;
-    const HarmoniaQty = HarmoniaQtyInput ? parseInt(HarmoniaQtyInput.value) || 0 : 0;
+    const harmoniaQty = harmoniaQtyInput ? parseInt(harmoniaQtyInput.value) || 0 : 0;
     const SophiaQty = SophiaQtyInput ? parseInt(SophiaQtyInput.value) || 0 : 0;
 
-    if (auraQty === 0 && HarmoniaQty === 0 && SophiaQty === 0) {
+    if (auraQty === 0 && harmoniaQty === 0 && SophiaQty === 0) {
       newErrors.address = 'اختر كمية من منتج واحد على الأقل';
     }
 
