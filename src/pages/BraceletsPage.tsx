@@ -255,7 +255,7 @@ export default function BraceletsPage() {
             <div className="grid grid-cols-2 gap-3">
               <div className="col-span-2 rounded-sm overflow-hidden" style={{ aspectRatio: '16/9' }}>
                 <img
-                  src="/curved1.jpg"
+                  src="/aurelia1.jpg"
                   alt="ORZI Heritage Bracelets"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
