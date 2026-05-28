@@ -16,7 +16,7 @@ export default function FeaturedBraceletsBlock() {
         {/* Image Side */}
         <div className="relative overflow-hidden" style={{ minHeight: '320px' }}>
           <img
-            src="/curved1.jpg"
+            src="/aurelia1.jpg"
             alt="ORZI Heritage Bracelets"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             style={{ position: 'absolute', inset: 0 }}
