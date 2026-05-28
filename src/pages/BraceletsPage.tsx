@@ -262,14 +262,14 @@ export default function BraceletsPage() {
               </div>
               <div className="rounded-sm overflow-hidden" style={{ aspectRatio: '1/1' }}>
                 <img
-                  src="/straight1.jpg"
+                  src="/solea1.jpg"
                   alt="AURA Bracelet"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
               <div className="rounded-sm overflow-hidden" style={{ aspectRatio: '1/1' }}>
                 <img
-                  src="/curvedgold1.jpg"
+                  src="/kairo1.jpg"
                   alt="SOPHIA Bracelet"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
