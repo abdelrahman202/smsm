@@ -1027,7 +1027,7 @@ fbq('track', 'PageView');
           kairoQty: kairoQty,
           aureliaQty: aureliaQty,
           soleaQty: soleaQty,
-          totalPrice: (auraQty + harmoniaQty + sophiaQty + kairoQty + aureliaQty + soleaQty) * 460,
+          totalPrice: (auraQty * 480) + (harmoniaQty * 480) + (sophiaQty * 480) + (kairoQty * 520) + (aureliaQty * 560) + (soleaQty * 480),
           timestamp: new Date().toISOString()
         };
 
@@ -1042,12 +1042,12 @@ fbq('track', 'PageView');
             },
             body: JSON.stringify(formData),
           });
-const finalPrice = (parseInt(document.getElementById('auraQty').value) || 0) * 460 +
-                   (parseInt(document.getElementById('harmoniaQty').value) || 0) * 460 +
-                   (parseInt(document.getElementById('sophiaQty').value) || 0) * 460 +
-                   (parseInt(document.getElementById('kairoQty').value) || 0) * 460 +
-                   (parseInt(document.getElementById('aureliaQty').value) || 0) * 460 +
-                   (parseInt(document.getElementById('soleaQty').value) || 0) * 460;
+const finalPrice = (parseInt(document.getElementById('auraQty').value) || 0) * 480 +
+                   (parseInt(document.getElementById('harmoniaQty').value) || 0) * 480 +
+                   (parseInt(document.getElementById('sophiaQty').value) || 0) * 480 +
+                   (parseInt(document.getElementById('kairoQty').value) || 0) * 520 +
+                   (parseInt(document.getElementById('aureliaQty').value) || 0) * 560 +
+                   (parseInt(document.getElementById('soleaQty').value) || 0) * 480;
 fbq('track', 'Purchase', {
   value: finalPrice,
   currency: 'EGP',

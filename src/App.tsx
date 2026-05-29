@@ -53,7 +53,7 @@ function App() {
 
     try {
       const totalQuantity = data.auraQuantity + data.harmoniaQuantity + data.sophiaQuantity;
-      const totalPrice = totalQuantity * 460;
+      const totalPrice = (data.auraQuantity * 480) + (data.harmoniaQuantity * 480) + (data.sophiaQuantity * 480);
 
       const formDataToSend = {
         name: data.name,
