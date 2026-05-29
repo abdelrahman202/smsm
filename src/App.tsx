@@ -68,7 +68,7 @@ function App() {
         timestamp: new Date().toISOString(),
       };
 
-      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHJvE27r492ytRwVREmcWP5ngJJzSeSeGl-1w56cxjj1RscFZT-27sGIdm6rv01L7q/exec';
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw0oljkykx1EdwQ67Amze_h-PFcsGBAKueQEUieERg/dev';
 
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
