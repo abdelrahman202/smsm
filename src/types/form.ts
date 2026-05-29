@@ -7,6 +7,9 @@ export interface OrderFormData {
   auraQuantity: number;
   harmoniaQuantity: number;
   sophiaQuantity: number;
+  kairoQuantity: number;
+  aureliaQuantity: number;
+  soleaQuantity: number;
 }
 
 export const governorates = {

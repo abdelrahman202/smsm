@@ -52,8 +52,9 @@ function App() {
     setIsSubmitting(true);
 
     try {
-      const totalQuantity = data.auraQuantity + data.harmoniaQuantity + data.sophiaQuantity;
-      const totalPrice = (data.auraQuantity * 480) + (data.harmoniaQuantity * 480) + (data.sophiaQuantity * 480);
+      const totalPrice = (data.auraQuantity * 480) + (data.harmoniaQuantity * 480) +
+                         (data.sophiaQuantity * 480) + (data.kairoQuantity * 520) +
+                         (data.aureliaQuantity * 560) + (data.soleaQuantity * 480);
 
       const formDataToSend = {
         name: data.name,
@@ -64,6 +65,9 @@ function App() {
         auraQty: data.auraQuantity,
         harmoniaQty: data.harmoniaQuantity,
         sophiaQty: data.sophiaQuantity,
+        kairoQty: data.kairoQuantity,
+        aureliaQty: data.aureliaQuantity,
+        soleaQty: data.soleaQuantity,
         totalPrice: totalPrice,
         timestamp: new Date().toISOString(),
       };

@@ -486,7 +486,21 @@
         }
 
         .bracelets-grid {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+
+        .bracelet-image {
+          height: 140px;
+        }
+
+        .bracelet-name {
+          font-size: 16px;
+        }
+
+        .bracelet-label {
+          font-size: 11px;
+          margin-bottom: 10px;
         }
 
         .header-content {
@@ -502,23 +516,34 @@
         .closing-logo {
           font-size: 24px;
         }
+
+        .modal-content {
+          padding: 32px 24px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .bracelets-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .bracelet-image {
+          height: 200px;
+        }
+
+        .hero-title {
+          font-size: 28px;
+        }
+
+        .hero-subtitle {
+          font-size: 16px;
+        }
+
+        .form-container {
+          padding: 24px 16px;
+        }
       }
     </style>
-      <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '2204816053376578');
-fbq('track', 'PageView');
-</script>
-<!-- End Meta Pixel Code -->
   </head>
   <body>
     <header>
@@ -655,6 +680,7 @@ fbq('track', 'PageView');
                 </div>
               </div>
             </div>
+            <div id="quantityError" class="error-message" style="text-align: center; margin-top: 12px;"></div>
 
             <div class="divider"></div>
 
@@ -876,6 +902,8 @@ fbq('track', 'PageView');
     </div>
 
     <script>
+      const PRICES = { aura: 480, harmonia: 480, sophia: 480, kairo: 520, aurelia: 560, solea: 480 };
+
       const governorates = {
         'القاهرة': ['المعادي', 'التجمع الخامس', 'مدينة نصر', 'مصر الجديدة', 'وسط البلد', 'شبرا', 'عين شمس', 'الزمالك', 'جاردن سيتي', 'حلوان'],
         'الجيزة': ['الدقي', 'المهندسين', 'الهرم', 'فيصل', 'أكتوبر', 'الشيخ زايد', 'المنيل', 'العجوزة', 'إمبابة'],
@@ -900,6 +928,35 @@ fbq('track', 'PageView');
       const submitBtn = document.getElementById('submitBtn');
       const modal = document.getElementById('successModal');
 
+      function getQuantities() {
+        return {
+          aura: parseInt(document.getElementById('auraQty').value) || 0,
+          harmonia: parseInt(document.getElementById('harmoniaQty').value) || 0,
+          sophia: parseInt(document.getElementById('sophiaQty').value) || 0,
+          kairo: parseInt(document.getElementById('kairoQty').value) || 0,
+          aurelia: parseInt(document.getElementById('aureliaQty').value) || 0,
+          solea: parseInt(document.getElementById('soleaQty').value) || 0,
+        };
+      }
+
+      function calcTotalPrice(qty) {
+        return (qty.aura * PRICES.aura) + (qty.harmonia * PRICES.harmonia) +
+               (qty.sophia * PRICES.sophia) + (qty.kairo * PRICES.kairo) +
+               (qty.aurelia * PRICES.aurelia) + (qty.solea * PRICES.solea);
+      }
+
+      function calcTotalItems(qty) {
+        return qty.aura + qty.harmonia + qty.sophia + qty.kairo + qty.aurelia + qty.solea;
+      }
+
+      function clearError(errorId) {
+        document.getElementById(errorId).textContent = '';
+      }
+
+      function showError(errorId, message) {
+        document.getElementById(errorId).textContent = message;
+      }
+
       governorateSelect.addEventListener('change', function() {
         const selectedGov = this.value;
         areaSelect.innerHTML = '<option value="">اختر المنطقة</option>';
@@ -918,14 +975,6 @@ fbq('track', 'PageView');
 
         clearError('governorateError');
       });
-
-      function clearError(errorId) {
-        document.getElementById(errorId).textContent = '';
-      }
-
-      function showError(errorId, message) {
-        document.getElementById(errorId).textContent = message;
-      }
 
       function validateForm() {
         let isValid = true;
@@ -971,15 +1020,9 @@ fbq('track', 'PageView');
           isValid = false;
         }
 
-        const auraQty = parseInt(document.getElementById('auraQty').value) || 0;
-        const harmoniaQty = parseInt(document.getElementById('harmoniaQty').value) || 0;
-        const sophiaQty = parseInt(document.getElementById('sophiaQty').value) || 0;
-        const kairoQty = parseInt(document.getElementById('kairoQty').value) || 0;
-        const aureliaQty = parseInt(document.getElementById('aureliaQty').value) || 0;
-        const soleaQty = parseInt(document.getElementById('soleaQty').value) || 0;
-
-        if (auraQty === 0 && harmoniaQty === 0 && sophiaQty === 0 && kairoQty === 0 && aureliaQty === 0 && soleaQty === 0) {
-          showError('addressError', 'اختر كمية من منتج واحد على الأقل');
+        const qty = getQuantities();
+        if (calcTotalItems(qty) === 0) {
+          showError('quantityError', 'اختر كمية من منتج واحد على الأقل');
           isValid = false;
         }
 
@@ -1004,12 +1047,7 @@ fbq('track', 'PageView');
         submitBtn.disabled = true;
         submitBtn.textContent = 'جاري الإرسال...';
 
-        const auraQty = parseInt(document.getElementById('auraQty').value) || 0;
-        const harmoniaQty = parseInt(document.getElementById('harmoniaQty').value) || 0;
-        const sophiaQty = parseInt(document.getElementById('sophiaQty').value) || 0;
-        const kairoQty = parseInt(document.getElementById('kairoQty').value) || 0;
-        const aureliaQty = parseInt(document.getElementById('aureliaQty').value) || 0;
-        const soleaQty = parseInt(document.getElementById('soleaQty').value) || 0;
+        const qty = getQuantities();
 
         const formData = {
           name: document.getElementById('name').value.trim(),
@@ -1021,13 +1059,13 @@ fbq('track', 'PageView');
           building: document.getElementById('building').value.trim(),
           floor: document.getElementById('floor').value.trim(),
           landmarks: document.getElementById('landmarks').value.trim(),
-          auraQty: auraQty,
-          harmoniaQty: harmoniaQty,
-          sophiaQty: sophiaQty,
-          kairoQty: kairoQty,
-          aureliaQty: aureliaQty,
-          soleaQty: soleaQty,
-          totalPrice: (auraQty * 480) + (harmoniaQty * 480) + (sophiaQty * 480) + (kairoQty * 520) + (aureliaQty * 560) + (soleaQty * 480),
+          auraQty: qty.aura,
+          harmoniaQty: qty.harmonia,
+          sophiaQty: qty.sophia,
+          kairoQty: qty.kairo,
+          aureliaQty: qty.aurelia,
+          soleaQty: qty.solea,
+          totalPrice: calcTotalPrice(qty),
           timestamp: new Date().toISOString()
         };
 
@@ -1042,28 +1080,18 @@ fbq('track', 'PageView');
             },
             body: JSON.stringify(formData),
           });
-const finalPrice = (parseInt(document.getElementById('auraQty').value) || 0) * 480 +
-                   (parseInt(document.getElementById('harmoniaQty').value) || 0) * 480 +
-                   (parseInt(document.getElementById('sophiaQty').value) || 0) * 480 +
-                   (parseInt(document.getElementById('kairoQty').value) || 0) * 520 +
-                   (parseInt(document.getElementById('aureliaQty').value) || 0) * 560 +
-                   (parseInt(document.getElementById('soleaQty').value) || 0) * 480;
-fbq('track', 'Purchase', {
-  value: finalPrice,
-  currency: 'EGP',
-  content_name: 'ORZI Heritage Bracelets',
-  num_items: (parseInt(document.getElementById('auraQty').value) || 0) +
-             (parseInt(document.getElementById('harmoniaQty').value) || 0) +
-             (parseInt(document.getElementById('sophiaQty').value) || 0) +
-             (parseInt(document.getElementById('kairoQty').value) || 0) +
-             (parseInt(document.getElementById('aureliaQty').value) || 0) +
-             (parseInt(document.getElementById('soleaQty').value) || 0)
-});
+
+          fbq('track', 'Purchase', {
+            value: formData.totalPrice,
+            currency: 'EGP',
+            content_name: 'ORZI Heritage Bracelets',
+            num_items: calcTotalItems(qty)
+          });
+
           modal.classList.add('active');
           form.reset();
           areaSelect.disabled = true;
         } catch (error) {
-          console.error('Error submitting form:', error);
           modal.classList.add('active');
         } finally {
           submitBtn.disabled = false;
@@ -1081,10 +1109,13 @@ fbq('track', 'Purchase', {
         }
       });
 
-      ['name', 'phone', 'area', 'street', 'building', 'floor', 'landmarks'].forEach(fieldId => {
-        document.getElementById(fieldId).addEventListener('input', function() {
-          clearError(fieldId + 'Error');
-        });
+      ['name', 'phone', 'area', 'street', 'building', 'floor', 'landmarks', 'governorate'].forEach(function(fieldId) {
+        var el = document.getElementById(fieldId);
+        if (el) {
+          el.addEventListener('input', function() {
+            clearError(fieldId + 'Error');
+          });
+        }
       });
 
       areaSelect.addEventListener('change', function() {
